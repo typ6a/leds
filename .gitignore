@@ -1,0 +1,4 @@
+.env
+nbproject/
+public/data/images/*
+!public/data/images/index.html
