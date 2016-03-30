@@ -69,18 +69,22 @@
                         <li><a href="/contact">контакы</a></li>
 
                         @if (Auth::check())
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Админка
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">добавить продукт</a></li>
-                                <li><a href="#">newhtf парсить категории</a></li>
-                                <li><a href="#">newhtf парсить продукты </a></li>
-                                <li><a href="#">newhtf допарсить продукты</a></li>
+                        
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Админка <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><i class="fa fa-btn fa-sign-out"></i>добавить продукт</a></li>
+                                <li><a href="#"><i class="fa fa-btn fa-sign-out"></i>newhtf парсить категории</a></li>
+                                <li><a href="#"><i class="fa fa-btn fa-sign-out"></i>newhtf парсить продукты</a></li>
+                                <li><a href="#"><i class="fa fa-btn fa-sign-out"></i>newhtf допарсить продукты</a></li>
                             </ul>
-                        </div>
+                        </li>         
+                        
+                        
                         @endif
                     </ul>
 
