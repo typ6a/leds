@@ -35,3 +35,12 @@ Route::group(['middleware' => ['web']], function () {
     Route::auth();
 
 });
+//----------------------------------------------------------------------------
+// ADD PRODUCT
+Route::any('product/add', 'ProductsController@addProduct');
+
+// PRODUCTS, CATEGORIES
+
+Route::get('catalog', 'CategoryController@index');//
+Route::get('catalog/category/{id}', 'CatalogController@category');
+Route::get('catalog/product/{id}', 'CatalogController@product');

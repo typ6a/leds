@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
+require_once '../../kdg/libs/debug.php';
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader

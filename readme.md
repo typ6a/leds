@@ -1,3 +1,3 @@
-# Laravel Quickstart - Intermediate - Task List With Authentication
+# Testing laravel
 
-http://laravel.com/docs/quickstart-intermediate
+http://newsuperled.com.ua

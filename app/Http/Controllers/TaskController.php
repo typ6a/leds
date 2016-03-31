@@ -79,4 +79,16 @@ class TaskController extends Controller
 
         return redirect('/tasks');
     }
+    
+    
+    //Znak
+    public function update(Request $request, Task $task)
+    {
+        $this->authorize('update', $task);
+
+        $task->update();
+
+        return redirect('/tasks');
+    }
+    
 }
