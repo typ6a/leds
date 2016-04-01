@@ -31,6 +31,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/tasks', 'TaskController@index');
     Route::post('/task', 'TaskController@store');
     Route::delete('/task/{task}', 'TaskController@destroy');
+Route::get('catalog', 'CatalogController@index');//
+Route::get('catalog/category/{id}', 'CatalogController@category');
+Route::get('catalog/product/{id}', 'CatalogController@product');
 
     Route::auth();
 
@@ -40,7 +43,3 @@ Route::group(['middleware' => ['web']], function () {
 Route::any('product/add', 'ProductsController@addProduct');
 
 // PRODUCTS, CATEGORIES
-
-Route::get('catalog', 'CategoryController@index');//
-Route::get('catalog/category/{id}', 'CatalogController@category');
-Route::get('catalog/product/{id}', 'CatalogController@product');

@@ -3,13 +3,11 @@
 @section('content')
     <div class="container">
        
-            
-
             <!-- categories -->
             @if (count($categories) > 0)
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Категории
+                        Каталог
                     </div>
 
                     <div class="panel-body">
@@ -19,14 +17,16 @@
                                 <th>&nbsp;</th>
                             </thead>
                             <tbody>
+                                                              
+                                
                                 @foreach ($categories as $category)
-                                    <tr>
-                                        <td class="table-text"><div>{{ $category->title }}</div></td>
-
-                                        
-                                   
-                                    </tr>
-                                @endforeach
+                                <tr>
+                                    <td><a href="{{ url('catalog/category/' . $category->id) }}">{{ $category->title }}</a></td>
+                                    <td align="right"><span class="badge">{{ $category->products->count() }}</span></td>
+                        </tr>
+@endforeach
+                                
+                                
                             </tbody>
                         </table>
                     </div>

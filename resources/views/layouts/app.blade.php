@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Quickstart - Intermediate</title>
+        
+        <title>Светодиодное освещение</title>
 
 
         <!-- Styles -->
@@ -111,7 +112,78 @@
         </nav>
 
         @yield('content')
+<div class="container" style="background-color:#F44336;color:#fff; margin-top: 10px">
+       
+   
 
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="">
+      Компания
+    </a> <br>
+      <a href="#" class="">
+      1лоавлдовыолдавы
+    </a><br>
+      <a href="#" class="">
+      2лоавлдовыолдавы
+    </a><br>
+      </a>
+      <a href="#" class="">
+      3лоавлдовыолдавы
+    </a><br>
+  </div>
+    
+    <div class="col-xs-6 col-md-3">
+    <a href="#" class="">
+      Компания
+    </a> <br>
+      <a href="#" class="">
+      1лоавлдовыолдавы
+    </a><br>
+      <a href="#" class="">
+      2лоавлдовыолдавы
+    </a><br>
+      </a>
+      <a href="#" class="">
+      3лоавлдовыолдавы
+    </a><br>
+  </div>
+    
+    <div class="col-xs-6 col-md-3">
+    <a href="#" class="">
+      Компания
+    </a> <br>
+      <a href="#" class="">
+      1лоавлдовыолдавы
+    </a><br>
+      <a href="#" class="">
+      2лоавлдовыолдавы
+    </a><br>
+      </a>
+      <a href="#" class="">
+      3лоавлдовыолдавы
+    </a><br>
+  </div>
+    
+    <div class="col-xs-6 col-md-3">
+    <a href="#" class="">
+      Компания
+    </a> <br>
+      <a href="#" class="">
+      1лоавлдовыолдавы
+    </a><br>
+      <a href="#" class="">
+      2лоавлдовыолдавы
+    </a><br>
+      </a>
+      <a href="#" class="">
+      3лоавлдовыолдавы
+    </a><br>
+  </div>
+    
+  
+</div>
+    </div>
         <!-- JavaScripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

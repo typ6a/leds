@@ -40,5 +40,14 @@ class CategoryController extends Controller
         ]);
     }
     
-   
+   public function category($category_id = null) {
+        $category = \App\Models\ProductCategory::find($category_id);
+        $categories = \App\Models\ProductCategory::where('parent_id', $category_id)->get();
+        $products = \App\Models\Product::where('category_id', $category_id)->get();
+        return view('categories.category', [
+            'category' => $category,
+            'categories' => $categories,
+            'products' => $products
+        ]);
+    }
 }
