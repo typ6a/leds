@@ -50,7 +50,7 @@ class CatalogController extends Controller
             'products' => $products
         ]);
     }
-     // http://products.localhost/catalog/product/1123
+     // http://products.localhost/leds/product/1123
     public function product($product_id) {
         $product = \App\Models\Product::find($product_id);
         //$category = \App\Models\Product\ProductCategory::find($category_id);
@@ -61,6 +61,14 @@ class CatalogController extends Controller
             //'category' => $category,
             //'properties' => $properties,
             //'images' => $images
+        ]);
+    }
+    
+    public function addProduct() {
+        $product = \App\Models\Product::whereNull('parent_id')->get();
+        return view('catalog.addProduct', [
+            'categories' => $categories,
+            //'products' => $products
         ]);
     }
 }
