@@ -64,11 +64,40 @@ class CatalogController extends Controller
         ]);
     }
     
-    public function addProduct() {
-        $product = \App\Models\Product::whereNull('parent_id')->get();
-        return view('catalog.addProduct', [
-            'categories' => $categories,
-            //'products' => $products
+    public function addProduct(Request $request) {
+
+        $categories = $categories = \App\Models\ProductCategory::whereNull('parent_id')->get();
+        
+        $category_id = $request->input('category_id');
+        $product_title = $request->input('product_title');
+        $product_price = $request->input('product_price');
+        
+        $product = new \App\Models\Product([
+            'category_id' => $category_id,
+            'title' => $product_title,
+            'price' => $product_price
+        ]);
+
+        if ($request->getMethod() === 'POST') {
+            //pre($_FILES);
+            $valid = $this->validate($request, [
+                'product_title' => 'required|unique:posts|max:255',
+                'category_id' => 'required',
+                'product_price' => 'required',
+            ]);
+            if($valid){
+                $product_id = $product->save();
+                pre($product_id, 1);
+            }else{
+                
+            }
+        }
+
+
+        //$data = '';
+        
+        return view('product/form', [
+            'categories' => $categories
         ]);
     }
 }
