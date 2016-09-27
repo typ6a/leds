@@ -13,7 +13,7 @@ class UpdatePicturesCrawler {
     public function execute() {
         // $products = \App\Models\ProductImage::whereNotIn('product_id', [])->get();
 
-        $products = \App\Models\Product\Product::
+        $products = \App\Models\Product::
             query()->leftJoin('product_image as pi', 'pi.product_id', '=', 'product.id')->whereNull('pi.id')->groupBy('product.id')->get([
             'product.*'
         ]);

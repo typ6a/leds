@@ -19,7 +19,7 @@ class Product extends Model
     );
     
     public function category(){
-        return $this->belongsTo('App\ModelsProductCategory');
+        return $this->belongsTo('App\Models\ProductCategory');
     }
     
     public function images(){
@@ -28,5 +28,12 @@ class Product extends Model
     
     public function properties(){
         return $this->hasMany('App\Models\ProductToProductProperty', 'product_id');
+    }
+
+
+
+    public function file()
+    {
+        return $this->hasMany('App\File');
     }
 }

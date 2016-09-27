@@ -11,7 +11,7 @@ class ProductProperty extends Model
     public $timestamps = false;
         
     protected $fillable = array(
-        'name'
+        'name',
     );
     
 }
